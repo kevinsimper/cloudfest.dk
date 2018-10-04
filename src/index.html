@@ -2,39 +2,111 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>CloudFest</title>
     <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
     <style media="screen">
       body {
-        background: linear-gradient( to right bottom,#202124, #111);
-        color: white;
         margin: 0;
         font-family: 'K2D', sans-serif;
         font-size: 1.4rem;
       }
-      #app {
+      body div {
+        padding: 10px;
+      }
+      #first {
+        background: linear-gradient( to right bottom,#202124, #111);
+        color: white;
         height: 100vh;
-        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      #app div {
+      #first div {
         text-align: center;
+      }
+      #second {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #third {
+        background: #1976d2;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #forth {
+        background: #aa00ff;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #six {
+        background: #4caf50;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
       }
     </style>
   </head>
   <body>
-    <div id="app">
+    <div id="first">
       <div>
         <h1>CloudFest.dk</h1>
         <h2>17. Nov OR 23. Nov 2018</h2>
-        <h2>Copenhagen</h2>
+        <h2>Community Conference</h2>
+        <h3>Copenhagen</h2>
+      </div>
+    </div>
+    <div id="second">
+      <div>
+        <h1>Topics:</h1>
+        <h2>Kubernetes</h2>
+        <h2>Cloud Functions</h2>
+        <h2>Machine Learning</h2>
+      </div>
+    </div>
+    <div id="third">
+      <div>
+        <h1>Schedule:</h1>
+        <h3>8:30 Doors open</h3>
+        <h3>9:30 Welcome</h3>
+        <h3>9:45 Cloud Functions</h3>
+        <h3>10:35 Kubernetes</h3>
+        <h3>11:05 🌮 Lunch</h3>
+        <h3>12:30 Machine Learning</h3>
+        <h3>13:20 Continues Delivery</h3>
+        <h3>14:05 Big Data</h3>
+        <h3>14:50 IoT</h3>
+        <h3>15:20 Firebase</h3>
+        <h3>16:00 Round up & thanks for today!</h3>
+      </div>
+    </div>
+    <div id="forth">
+      <div>
+        <h1>Tickets:</h1>
+        <h3>120 DKK each</h3>
+      </div>
+    </div>
+    <div id="six">
+      <div>
+        <h1>Who is behind?</h1>
+        <h3>Google Cloud Community Copenhagen</h3>
+        <h3>Google Developer Group Copenhagen</h3>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"></script>
     <script>
-    var instance = new TypeIt('h1', {
+    var instance = new TypeIt('#first h1', {
         strings: ['CloudFest.dk'],
     });
     </script>
