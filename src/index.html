@@ -14,6 +14,9 @@
       body div {
         padding: 10px;
       }
+      a {
+        word-break: break-all;
+      }
       #first {
         background: linear-gradient( to right bottom,#202124, #111);
         color: white;
@@ -47,14 +50,79 @@
         align-items: center;
         justify-content: center;
       }
-      #six {
-        background: #4caf50;
+      #forth a {
+        color: #f5f118;;
+      }
+      #behindteam {
+        background: #b3369b;
         min-height: 100vh;
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
 
+      }
+      #behindteam #team {
+        display: flex;
+      }
+      #behindteam #team img {
+            width: 200px;
+      }
+      #callforspeakers {
+        background: #23b51c;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      #callforspeakers a {
+        color: white;
+      }
+      #location a {
+        color: white;
+      }
+      @media (max-width: 500px) {
+        #location .map {
+          display: none
+        }
+      }
+      #location {
+        background: #201f46;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      #faq {
+        background: #3733b9;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #faq div {
+        max-width: 800px;
+      }
+      #contact {
+        background: #c53969;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #codeofconduct {
+        background: #6a4ac3;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     </style>
   </head>
@@ -63,8 +131,10 @@
       <div>
         <h1>CloudFest.dk</h1>
         <h2>24. Nov 2018</h2>
-        <h2>Community Conference</h2>
-        <h3>Copenhagen</h2>
+        <h2>Non-profit Community Conference</h2>
+        <h3><img style="width: 30px; vertical-align: text-top;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxLjQxNDIxOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTAxIDEyNiIgd2lkdGg9IjEwMCUiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGQ9Ik00Ny41MTEsMTAzLjkyMWMwLjgsMC44IDEuOCwxLjIgMi44LDEuMmMxLDAgMiwtMC40IDIuOCwtMS4ybDIyLjIsLTIyLjJjMTMuOCwtMTMuOCAxMy44LC0zNi4zIDAsLTUwLjFjLTEzLjgsLTEzLjggLTM2LjIsLTEzLjggLTUwLDBjLTEzLjgsMTMuOCAtMTMuOCwzNi4zIDAsNTAuMWwyMi4yLDIyLjJaIiBzdHlsZT0iZmlsbDojZmYxNTE1O2ZpbGwtcnVsZTpub256ZXJvOyIvPjxjbGlwUGF0aCBpZD0iX2NsaXAxIj48cGF0aCBjbGlwLXJ1bGU9Im5vbnplcm8iIGQ9Ik00Ny41MTEsMTAzLjkyMWMwLjgsMC44IDEuOCwxLjIgMi44LDEuMmMxLDAgMiwtMC40IDIuOCwtMS4ybDIyLjIsLTIyLjJjMTMuOCwtMTMuOCAxMy44LC0zNi4zIDAsLTUwLjFjLTEzLjgsLTEzLjggLTM2LjIsLTEzLjggLTUwLDBjLTEzLjgsMTMuOCAtMTMuOCwzNi4zIDAsNTAuMWwyMi4yLDIyLjJaIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjX2NsaXAxKSI+PHJlY3QgaGVpZ2h0PSI5MS44MzMiIHN0eWxlPSJmaWxsOiNlMTEzMTM7IiB3aWR0aD0iMzciIHg9IjUwLjMxMSIgeT0iMTguMjE3Ii8+PC9nPjxwYXRoIGQ9Ik00OC4xMzgsOTcuNTI3bDAsMy45MjVsLTIxLjM4MiwtMjEuMzgyYzkuNTA0LDguNzg0IDE4LjQ2MywxNi4xNTggMjEuMzgyLDE3LjQ1N1oiIHN0eWxlPSJmaWxsOiNmZmY7ZmlsbC1vcGFjaXR5OjAuNTsiLz48cGF0aCBkPSJNNTAuMzExLDY3LjcyMWM4LDAgMTQuNSwtNi41IDE0LjUsLTE0LjVjMCwtOCAtNi41LC0xNC41IC0xNC41LC0xNC41Yy04LDAgLTE0LjUsNi41IC0xNC41LDE0LjVjMCw4IDYuNSwxNC41IDE0LjUsMTQuNVoiIHN0eWxlPSJmaWxsOiNjNTEwMTA7ZmlsbC1ydWxlOm5vbnplcm87Ii8+PGNsaXBQYXRoIGlkPSJfY2xpcDIiPjxwYXRoIGNsaXAtcnVsZT0ibm9uemVybyIgZD0iTTUwLjMxMSw2Ny43MjFjOCwwIDE0LjUsLTYuNSAxNC41LC0xNC41YzAsLTggLTYuNSwtMTQuNSAtMTQuNSwtMTQuNWMtOCwwIC0xNC41LDYuNSAtMTQuNSwxNC41YzAsOCA2LjUsMTQuNSAxNC41LDE0LjVaIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjX2NsaXAyKSI+PHJlY3QgaGVpZ2h0PSI0NCIgc3R5bGU9ImZpbGw6I2UxMTMxMzsiIHdpZHRoPSIyMSIgeD0iMjkuMzExIiB5PSIzMC42OTYiLz48L2c+PHBhdGggZD0iTTI5LjMxNCwzMS42MzdsLTEuMDE1LDIuOTg0Yy00LjMzOSw0LjYyNyAtNi4yMzMsNy42OSAtOS42ODYsMTMuMTg0YzEuNjU1LC01LjI0MSA0LjU1NSwtMTAuMTY4IDguNjk4LC0xNC4zMTJjMC42NDksLTAuNjQ5IDEuMzE4LC0xLjI2OCAyLjAwMywtMS44NTZaIiBzdHlsZT0iZmlsbDojZmZmO2ZpbGwtb3BhY2l0eTowLjU7Ii8+PC9nPjwvc3ZnPg=="/> Google Success Online - Nørrebro, Copenhagen</h2>
+        <h5>Sponsors:</h5>
+        <h4><img style="max-width: 200px;" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c51f.png"/></h4>
       </div>
     </div>
     <div id="second">
@@ -73,6 +143,9 @@
         <h2>Kubernetes</h2>
         <h2>Cloud Functions</h2>
         <h2>Machine Learning</h2>
+        <h2>IoT</h2>
+        <h2></h2>
+        <h2>Want to give a talk? <a href="#seven">Submit a proposal here!</a></h2>
       </div>
     </div>
     <div id="third">
@@ -80,28 +153,99 @@
         <h1>Schedule:</h1>
         <h3>8:30 Doors open</h3>
         <h3>9:30 Welcome</h3>
-        <h3>9:45 Cloud Functions</h3>
-        <h3>10:35 Kubernetes</h3>
+        <h3>9:45 Deep learning on ML Engine - Balázs Tóth </h3>
+        <h3>10:35 Second talk</h3>
         <h3>11:05 🌮 Lunch</h3>
-        <h3>12:30 Machine Learning</h3>
-        <h3>13:20 Continues Delivery</h3>
-        <h3>14:05 Big Data</h3>
-        <h3>14:50 IoT</h3>
-        <h3>15:20 Firebase</h3>
-        <h3>16:00 Round up & thanks for today!</h3>
+        <h3>12:30 Third talk</h3>
+        <h3>13:20 Forth talk</h3>
+        <h3>14:50 Fifth talk</h3>
+        <h3>15:00 Round up & thanks for today!</h3>
       </div>
     </div>
     <div id="forth">
       <div>
         <h1>Tickets:</h1>
-        <h3>120 DKK each</h3>
+        <h3>90 Early Bird DKK each</h3>
+        <h2><a href="https://ti.to/cloudfest-dk/gcc-cloudfest-dk">https://ti.to/cloudfest-dk/gcc-cloudfest-dk</a>
       </div>
     </div>
-    <div id="six">
+    <div id="behindteam">
       <div>
         <h1>Who is behind?</h1>
-        <h3>Google Cloud Community Copenhagen</h3>
-        <h3>Google Developer Group Copenhagen</h3>
+        <h3><a href="https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/">Google Cloud Community Copenhagen</a></h3>
+        <h3><a href="https://www.meetup.com/GDG-Copenhagen/">Google Developer Group Copenhagen</a></h3>
+        <div id="team">
+          <div><img src="https://avatars1.githubusercontent.com/u/1126497?s=460&v=4"/><br/>Kevin Simper</div>
+          <div>
+            <img src="https://avatars3.githubusercontent.com/u/959142?s=460&v=4"/><br/>
+            Cem Turan</div>
+        </div>
+      </div>
+    </div>
+    <div id="location">
+      <div>
+        <h1>Location</h1>
+        <h2>Google Success Online</h2>
+        <h3><a href="https://goo.gl/maps/rLiXZeUvsJ92">https://goo.gl/maps/rLiXZeUvsJ92</a></h3>
+        <h2>Nørrebrogade 34, 2200 København</h2>
+        <div class="map" style="max-width: 600px;"><iframe style="width: 100%; height: 400px" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8996.042070118297!2d12.5585251!3d55.6888049!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3bc580d2132adf88!2sGoogle+Succes+Online!5e0!3m2!1sda!2sdk!4v1541602296018" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+    <div id="callforspeakers">
+      <div>
+        <h1>Call for Speakers</h1>
+        <h3><a href="https://goo.gl/forms/2ukZP2jMmBIEeZnA2">https://goo.gl/forms/2ukZP2jMmBIEeZnA2</a></h3>
+      </div>
+    </div>
+    <div id="faq">
+      <div>
+        <h1>FAQ</h1>
+        <ul>
+          <li><h2>Why are you organizing this?</h2>
+            We like bringing people together and learning new stuff. Cloud offerings
+            are becoming more and more interesting and learning from people who have
+            already done it is a awesome way to advance.
+          </li>
+          <li>
+            <h2>How is this event non-profit?</h2>
+            The budget will be shared in a public spreadsheet and after the event
+            all the proceeds will be donated to RedBarnet (safe the child). Organizing
+            events both takes a lot of time and costs money and we try to be as frugal and resourcesful to
+            create the best event we can. We are thankful to our sponsors who help make it possible!
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="contact">
+      <div>
+        <h1>Contact</h1>
+        <h3>Find our contact details here, you are welcome to call us or email us!</h3>
+        <h3>kevin.simper@gmail.com</h3>
+        <h3>+45 40 36 05 65</h3>
+      </div>
+    </div>
+    <div id="codeofconduct">
+      <div>
+        <h1>Code Of Conduct</h1>
+        All delegates, speakers, sponsors and volunteers at any CloudFest event are required to agree with the following code of conduct. Organizers will enforce this code throughout the event.
+
+        <h3>The Quick Version</h3>
+        CloudFest is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.
+
+        <h3>The Less Quick Version</h3>
+        Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
+
+        Participants asked to stop any harassing behavior are expected to comply immediately.
+
+        Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.
+
+        If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
+
+        If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified by a clearly marked "STAFF" shirt.
+
+        Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+
+        We expect participants to follow these rules at all conference venues and conference-related social events.
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"></script>
