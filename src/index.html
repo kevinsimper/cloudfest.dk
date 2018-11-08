@@ -18,6 +18,25 @@
         word-break: break-all;
         color: white;
       }
+      .buyticket {
+        display: inline-block;
+        color: #fff;
+        background: #f44336;
+        border: 0;
+        font-size: 20px;
+        padding: 12px 20px;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: all .15s ease;
+      }
+      .buyticket:hover {
+        transform: translateY(-2px);
+        background: #dc3124;
+        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+      }
+      .buyticket:active {
+        transform: translateY(1px);
+      }
       #first {
         background: linear-gradient( to right bottom,#202124, #111);
         color: white;
@@ -30,6 +49,7 @@
         text-align: center;
       }
       #second {
+        color: #111111c4;
         height: 100vh;
         display: flex;
         align-items: center;
@@ -56,7 +76,7 @@
       #talks details h3 {
         display: contents;
       }
-      #forth {
+      #tickets {
         background: #aa00ff;
         min-height: 100vh;
         color: white;
@@ -64,7 +84,7 @@
         align-items: center;
         justify-content: center;
       }
-      #forth a {
+      #tickets a {
         color: #f5f118;;
       }
       #behindteam {
@@ -147,18 +167,21 @@
   <body>
     <div id="first">
       <div>
-        <h1>CloudFest.dk</h1>
+        <h1 style="font-size: 70px">CloudFest.dk</h1>
         <h2>24. Nov 2018</h2>
-        <h2>Non-profit Community Conference</h2>
+        <h2 style="max-width: 640px;">A Non-profit Community Conference about using the cloud to make better products.</h2>
         <h3><img style="width: 30px; vertical-align: text-top;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxLjQxNDIxOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTAxIDEyNiIgd2lkdGg9IjEwMCUiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGQ9Ik00Ny41MTEsMTAzLjkyMWMwLjgsMC44IDEuOCwxLjIgMi44LDEuMmMxLDAgMiwtMC40IDIuOCwtMS4ybDIyLjIsLTIyLjJjMTMuOCwtMTMuOCAxMy44LC0zNi4zIDAsLTUwLjFjLTEzLjgsLTEzLjggLTM2LjIsLTEzLjggLTUwLDBjLTEzLjgsMTMuOCAtMTMuOCwzNi4zIDAsNTAuMWwyMi4yLDIyLjJaIiBzdHlsZT0iZmlsbDojZmYxNTE1O2ZpbGwtcnVsZTpub256ZXJvOyIvPjxjbGlwUGF0aCBpZD0iX2NsaXAxIj48cGF0aCBjbGlwLXJ1bGU9Im5vbnplcm8iIGQ9Ik00Ny41MTEsMTAzLjkyMWMwLjgsMC44IDEuOCwxLjIgMi44LDEuMmMxLDAgMiwtMC40IDIuOCwtMS4ybDIyLjIsLTIyLjJjMTMuOCwtMTMuOCAxMy44LC0zNi4zIDAsLTUwLjFjLTEzLjgsLTEzLjggLTM2LjIsLTEzLjggLTUwLDBjLTEzLjgsMTMuOCAtMTMuOCwzNi4zIDAsNTAuMWwyMi4yLDIyLjJaIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjX2NsaXAxKSI+PHJlY3QgaGVpZ2h0PSI5MS44MzMiIHN0eWxlPSJmaWxsOiNlMTEzMTM7IiB3aWR0aD0iMzciIHg9IjUwLjMxMSIgeT0iMTguMjE3Ii8+PC9nPjxwYXRoIGQ9Ik00OC4xMzgsOTcuNTI3bDAsMy45MjVsLTIxLjM4MiwtMjEuMzgyYzkuNTA0LDguNzg0IDE4LjQ2MywxNi4xNTggMjEuMzgyLDE3LjQ1N1oiIHN0eWxlPSJmaWxsOiNmZmY7ZmlsbC1vcGFjaXR5OjAuNTsiLz48cGF0aCBkPSJNNTAuMzExLDY3LjcyMWM4LDAgMTQuNSwtNi41IDE0LjUsLTE0LjVjMCwtOCAtNi41LC0xNC41IC0xNC41LC0xNC41Yy04LDAgLTE0LjUsNi41IC0xNC41LDE0LjVjMCw4IDYuNSwxNC41IDE0LjUsMTQuNVoiIHN0eWxlPSJmaWxsOiNjNTEwMTA7ZmlsbC1ydWxlOm5vbnplcm87Ii8+PGNsaXBQYXRoIGlkPSJfY2xpcDIiPjxwYXRoIGNsaXAtcnVsZT0ibm9uemVybyIgZD0iTTUwLjMxMSw2Ny43MjFjOCwwIDE0LjUsLTYuNSAxNC41LC0xNC41YzAsLTggLTYuNSwtMTQuNSAtMTQuNSwtMTQuNWMtOCwwIC0xNC41LDYuNSAtMTQuNSwxNC41YzAsOCA2LjUsMTQuNSAxNC41LDE0LjVaIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjX2NsaXAyKSI+PHJlY3QgaGVpZ2h0PSI0NCIgc3R5bGU9ImZpbGw6I2UxMTMxMzsiIHdpZHRoPSIyMSIgeD0iMjkuMzExIiB5PSIzMC42OTYiLz48L2c+PHBhdGggZD0iTTI5LjMxNCwzMS42MzdsLTEuMDE1LDIuOTg0Yy00LjMzOSw0LjYyNyAtNi4yMzMsNy42OSAtOS42ODYsMTMuMTg0YzEuNjU1LC01LjI0MSA0LjU1NSwtMTAuMTY4IDguNjk4LC0xNC4zMTJjMC42NDksLTAuNjQ5IDEuMzE4LC0xLjI2OCAyLjAwMywtMS44NTZaIiBzdHlsZT0iZmlsbDojZmZmO2ZpbGwtb3BhY2l0eTowLjU7Ii8+PC9nPjwvc3ZnPg=="/> Google Success Online - Nørrebro, Copenhagen</h2>
+        <div><a class="buyticket" href="#tickets">Buy a ticket</a></div>
         <h5>Sponsors:</h5>
         <h4><img style="max-width: 200px;" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c51f.png"/></h4>
+        <h5>Proceeds goes to:</h5>
+        <h4><img style="max-width: 200px;" src="https://redbarnet.nemtilmeld.dk/images/organizations/15783/logo.png?mtime=1513857805"/></h4>
       </div>
     </div>
     <div id="second">
       <div>
-        <h1>Learning and sharing the latest about Cloud Native</h1>
-        <h3>We want to make a day where we go in-depth and share experiences and stories about Cloud Native tools and Google Cloud</h3>
+        <h1>Join for a day with learning and sharing the latest about Cloud</h1>
+        <h3>We want to make a day where we go in-depth and share experiences and stories about Cloud Native tools and Google Cloud. Meet others who focuses on making better solutions with Cloud offerings.</h3>
         <h2>Topics that will talk about:</h2>
         <h3>Kubernetes<br/>- <small>KNative, Monitoring, Scaling, Logging</small></h3>
         <h3>Cloud Functions<br/>- <small>Architecture, Service-Discovery, Price</small></h3>
@@ -192,7 +215,7 @@
         <h3>15:00 Round up & thanks for today!</h3>
       </div>
     </div>
-    <div id="forth">
+    <div id="tickets">
       <div>
         <h1>Tickets:</h1>
         <h3>90 DKK Early Bird</h3>
