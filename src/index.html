@@ -16,6 +16,7 @@
       }
       a {
         word-break: break-all;
+        color: white;
       }
       #first {
         background: linear-gradient( to right bottom,#202124, #111);
@@ -34,13 +35,26 @@
         align-items: center;
         justify-content: center;
       }
-      #third {
+      #second > div {
+        max-width: 800px;
+      }
+      #second a {
+        color: blue;
+      }
+      #talks {
         background: #1976d2;
         min-height: 100vh;
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      #talks > div {
+        max-width: 800px;
+        width: 100%;
+      }
+      #talks details h3 {
+        display: contents;
       }
       #forth {
         background: #aa00ff;
@@ -64,6 +78,7 @@
       }
       #behindteam #team {
         display: flex;
+        flex-wrap: wrap;
       }
       #behindteam #team img {
             width: 200px;
@@ -124,6 +139,9 @@
         align-items: center;
         justify-content: center;
       }
+      #codeofconduct > div {
+        max-width: 800px;
+      }
     </style>
   </head>
   <body>
@@ -139,33 +157,47 @@
     </div>
     <div id="second">
       <div>
-        <h1>Topics:</h1>
-        <h2>Kubernetes</h2>
-        <h2>Cloud Functions</h2>
-        <h2>Machine Learning</h2>
-        <h2>IoT</h2>
-        <h2></h2>
-        <h2>Want to give a talk? <a href="#seven">Submit a proposal here!</a></h2>
+        <h1>Learning and sharing the latest about Cloud Native</h1>
+        <h3>We want to make a day where we go in-depth and share experiences and stories about Cloud Native tools and Google Cloud</h3>
+        <h2>Topics that will talk about:</h2>
+        <h3>Kubernetes<br/>- <small>KNative, Monitoring, Scaling, Logging</small></h3>
+        <h3>Cloud Functions<br/>- <small>Architecture, Service-Discovery, Price</small></h3>
+        <h3>Machine Learning<br/>- <small>Deployment, Iterations, Efficiency</small></h3>
+        <h3>IoT<br/>- <small>Tensorflow, Dataflow, BigQuery</small></h3>
+        <h3></h3>
+        <h3>Want to give a talk? <a href="#seven">Submit a proposal here!</a></h3>
       </div>
     </div>
-    <div id="third">
+    <div id="talks">
       <div>
         <h1>Schedule:</h1>
-        <h3>8:30 Doors open</h3>
+        <h3>8:30 Doors open (☕️ coffee and 🥐 pasteries)</h3>
         <h3>9:30 Welcome</h3>
-        <h3>9:45 Deep learning on ML Engine - Balázs Tóth </h3>
-        <h3>10:35 Second talk</h3>
-        <h3>11:05 🌮 Lunch</h3>
-        <h3>12:30 Third talk</h3>
-        <h3>13:20 Forth talk</h3>
-        <h3>14:50 Fifth talk</h3>
+        <details>
+          <summary>
+            <h3>9:45 Deep learning on ML Engine - <a href="https://www.linkedin.com/in/balazs-toth-6186005a/">Balázs Tóth</a>
+            </h3>
+          </summary>
+          <ul>
+            <li>Overview of a Trustpilot ml engine service in production - a spam review detector</li>
+            <li>A tutorial on training neural networks on gcp</li>
+          </ul>
+        </details>
+        <h3>10:30 Not annonced - <a href="#seven">Submit your proposal!</a></h3>
+        <h3>11:15 🌮 Lunch</h3>
+        <h3>12:00 Not annonced</h3>
+        <h3>13:20 Not annonced</h3>
+        <h3>13:20 ☕️ Coffee and 🍩 cake break</h3>
+        <h3>14:00 Not annonced</h3>
         <h3>15:00 Round up & thanks for today!</h3>
       </div>
     </div>
     <div id="forth">
       <div>
         <h1>Tickets:</h1>
-        <h3>90 Early Bird DKK each</h3>
+        <h3>90 DKK Early Bird</h3>
+        <h3>120 DKK Normal</h3>
+        <h3>150 DKK Late Supporter</h3>
         <h2><a href="https://ti.to/cloudfest-dk/gcc-cloudfest-dk">https://ti.to/cloudfest-dk/gcc-cloudfest-dk</a>
       </div>
     </div>
