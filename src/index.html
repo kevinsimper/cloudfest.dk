@@ -12,7 +12,7 @@
         font-family: 'K2D', sans-serif;
         font-size: 1.4rem;
       }
-      body div {
+      body > div:not(.chat) {
         padding: 10px;
       }
       a {
@@ -41,7 +41,7 @@
       #first {
         background: linear-gradient( to right bottom,#202124, #111);
         color: white;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -51,7 +51,7 @@
       }
       #second {
         color: #111111c4;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -107,8 +107,13 @@
         display: flex;
         flex-wrap: wrap;
       }
+      #behindteam #team > div {
+        margin-right: 10px;
+      }
       #behindteam #team img {
-            width: 200px;
+        width: 200px;
+        filter: saturate(50%) brightness(68%);
+        border-radius: 10px;
       }
       #callforspeakers {
         background: #08ad00;
@@ -178,13 +183,13 @@
   <body>
     <div id="first">
       <div>
-        <h1 style="font-size: 70px">CloudFest.dk</h1>
+        <h1 style="font-size: 55px">CloudFest.dk</h1>
         <h2>24. Nov 2018</h2>
         <h2 style="max-width: 640px;">A Non-profit Community Conference about using the cloud to make better products.</h2>
         <h3><img style="width: 30px; vertical-align: text-top;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxLjQxNDIxOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTAxIDEyNiIgd2lkdGg9IjEwMCUiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGQ9Ik00Ny41MTEsMTAzLjkyMWMwLjgsMC44IDEuOCwxLjIgMi44LDEuMmMxLDAgMiwtMC40IDIuOCwtMS4ybDIyLjIsLTIyLjJjMTMuOCwtMTMuOCAxMy44LC0zNi4zIDAsLTUwLjFjLTEzLjgsLTEzLjggLTM2LjIsLTEzLjggLTUwLDBjLTEzLjgsMTMuOCAtMTMuOCwzNi4zIDAsNTAuMWwyMi4yLDIyLjJaIiBzdHlsZT0iZmlsbDojZmYxNTE1O2ZpbGwtcnVsZTpub256ZXJvOyIvPjxjbGlwUGF0aCBpZD0iX2NsaXAxIj48cGF0aCBjbGlwLXJ1bGU9Im5vbnplcm8iIGQ9Ik00Ny41MTEsMTAzLjkyMWMwLjgsMC44IDEuOCwxLjIgMi44LDEuMmMxLDAgMiwtMC40IDIuOCwtMS4ybDIyLjIsLTIyLjJjMTMuOCwtMTMuOCAxMy44LC0zNi4zIDAsLTUwLjFjLTEzLjgsLTEzLjggLTM2LjIsLTEzLjggLTUwLDBjLTEzLjgsMTMuOCAtMTMuOCwzNi4zIDAsNTAuMWwyMi4yLDIyLjJaIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjX2NsaXAxKSI+PHJlY3QgaGVpZ2h0PSI5MS44MzMiIHN0eWxlPSJmaWxsOiNlMTEzMTM7IiB3aWR0aD0iMzciIHg9IjUwLjMxMSIgeT0iMTguMjE3Ii8+PC9nPjxwYXRoIGQ9Ik00OC4xMzgsOTcuNTI3bDAsMy45MjVsLTIxLjM4MiwtMjEuMzgyYzkuNTA0LDguNzg0IDE4LjQ2MywxNi4xNTggMjEuMzgyLDE3LjQ1N1oiIHN0eWxlPSJmaWxsOiNmZmY7ZmlsbC1vcGFjaXR5OjAuNTsiLz48cGF0aCBkPSJNNTAuMzExLDY3LjcyMWM4LDAgMTQuNSwtNi41IDE0LjUsLTE0LjVjMCwtOCAtNi41LC0xNC41IC0xNC41LC0xNC41Yy04LDAgLTE0LjUsNi41IC0xNC41LDE0LjVjMCw4IDYuNSwxNC41IDE0LjUsMTQuNVoiIHN0eWxlPSJmaWxsOiNjNTEwMTA7ZmlsbC1ydWxlOm5vbnplcm87Ii8+PGNsaXBQYXRoIGlkPSJfY2xpcDIiPjxwYXRoIGNsaXAtcnVsZT0ibm9uemVybyIgZD0iTTUwLjMxMSw2Ny43MjFjOCwwIDE0LjUsLTYuNSAxNC41LC0xNC41YzAsLTggLTYuNSwtMTQuNSAtMTQuNSwtMTQuNWMtOCwwIC0xNC41LDYuNSAtMTQuNSwxNC41YzAsOCA2LjUsMTQuNSAxNC41LDE0LjVaIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjX2NsaXAyKSI+PHJlY3QgaGVpZ2h0PSI0NCIgc3R5bGU9ImZpbGw6I2UxMTMxMzsiIHdpZHRoPSIyMSIgeD0iMjkuMzExIiB5PSIzMC42OTYiLz48L2c+PHBhdGggZD0iTTI5LjMxNCwzMS42MzdsLTEuMDE1LDIuOTg0Yy00LjMzOSw0LjYyNyAtNi4yMzMsNy42OSAtOS42ODYsMTMuMTg0YzEuNjU1LC01LjI0MSA0LjU1NSwtMTAuMTY4IDguNjk4LC0xNC4zMTJjMC42NDksLTAuNjQ5IDEuMzE4LC0xLjI2OCAyLjAwMywtMS44NTZaIiBzdHlsZT0iZmlsbDojZmZmO2ZpbGwtb3BhY2l0eTowLjU7Ii8+PC9nPjwvc3ZnPg=="/> Google Success Online - Nørrebro, Copenhagen</h2>
         <div><a class="buyticket" href="#tickets">Buy a ticket</a></div>
         <h5>Sponsors:</h5>
-        <h4><img style="max-width: 200px;" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c51f.png"/></h4>
+        <h4><img style="max-width: 200px;" src="google.png"/></h4>
         <h5>Proceeds goes to:</h5>
         <h4><img style="max-width: 200px;" src="https://redbarnet.nemtilmeld.dk/images/organizations/15783/logo.png?mtime=1513857805"/></h4>
       </div>
@@ -249,6 +254,9 @@
           <div>
             <img src="https://avatars3.githubusercontent.com/u/959142?s=460&v=4"/><br/>
             Cem Turan</div>
+          <div>
+            <img src="https://avatars3.githubusercontent.com/u/13701719?s=460&v=4"/><br/>
+            Zoey Zou</div>
         </div>
       </div>
     </div>
@@ -329,5 +337,20 @@
         strings: ['CloudFest.dk'],
     });
     </script>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div class="chat" id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="chat"><div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="227025934699628">
+    </div></div>
   </body>
 </html>
