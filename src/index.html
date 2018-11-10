@@ -78,8 +78,18 @@
         max-width: 800px;
         width: 100%;
       }
+      #talks details {
+        margin: 1em 0 1em;
+      }
       #talks details h3 {
         display: contents;
+      }
+      #talks .speaker-image {
+        float: right;
+        width: 200px;
+        filter: grayscale(50%);
+        border-radius: 100%;
+        margin: 0 0 20px 20px;
       }
       #tickets {
         background: #bf3fff;
@@ -182,6 +192,15 @@
       #codeofconduct > div {
         max-width: 800px;
       }
+      #diversity {
+        background: #8cc34a;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 100px;
+      }
     </style>
   </head>
   <body>
@@ -208,7 +227,7 @@
         <h3>Machine Learning<br/>- <small>Deployment, Iterations, Efficiency</small></h3>
         <h3>IoT<br/>- <small>Tensorflow, Dataflow, BigQuery</small></h3>
         <h3></h3>
-        <h3>Want to give a talk? <a href="#seven">Submit a proposal here!</a></h3>
+        <h3>Want to give a talk? <a href="#callforspeakers">Submit a proposal here!</a></h3>
       </div>
     </div>
     <div id="talks">
@@ -216,20 +235,57 @@
         <h1>Schedule:</h1>
         <h3>8:30 Doors open (☕️ coffee and 🥐 pastries)</h3>
         <h3>9:30 Welcome</h3>
-        <details>
-          <summary>
+        <details id="balazs" open="open">
+          <summary id="balazs_title">
             <h3>9:45 Deep learning on ML Engine - <a href="https://www.linkedin.com/in/balazs-toth-6186005a/">Balázs Tóth</a>
             </h3>
           </summary>
-          <ul>
-            <li>Overview of a TrustPilot ML engine service in production - a spam review detector</li>
-            <li>A tutorial on training neural networks on GCP</li>
-          </ul>
+          <div id="balazs_bio">
+            <img class="speaker-image" src="speakers/balazs.png"/>
+            <p>
+              Machine learning practitioners quickly reach the limit of their own computers, especially if they are dealing with big data sets. The solution for this problem is to train machine learning models using cloud services.
+            </p>
+            <p>
+              I will talk about how to train and deploy neural network models on Google Cloud. I will give an overview of a Trustpilot fraud detection service that is deployed on ML Engine. Furthermore, I will give a tutorial on training neural networks with Keras on ML Engine. This tutorial will help the beginner-level ML Engine user navigate this new landscape.
+            </p>
+            <ul>
+              <li>Overview of a TrustPilot ML engine service in production - a spam review detector</li>
+              <li>A tutorial on training neural networks on GCP</li>
+            </ul>
+            <small><a href="#balazs"># Direct link</a></small>
+          </div>
         </details>
-        <h3>10:30 Not announced - <a href="#seven">Submit your proposal!</a></h3>
+        <details id="kevin" open="open">
+          <summary id="kevin_title"><h3>10:30 Serverless with KNative on Kubernetes - Kevin Simper</h3></summary>
+          <div id="kevin_bio">
+            <img src="https://avatars1.githubusercontent.com/u/1126497?s=460&v=4" class="speaker-image" />
+            <p>
+              Knative provides a set of middleware components that are essential to build modern, source-centric, and container-based applications that can run anywhere: on premises, in the cloud, or even in a third-party data center. Knative components are built on Kubernetes and codify the best practices shared by successful real-world Kubernetes-based frameworks. It enables developers to focus just on writing interesting code, without worrying about the “boring but difficult” parts of building, deploying, and managing an application.
+            </p>
+            <small><a href="#kevin"># Direct link</a></small>
+          </div>
+        </details>
         <h3>11:15 🌮 Lunch</h3>
-        <h3>12:00 Not announced</h3>
-        <h3>13:20 Not announced</h3>
+        <details id="amanda" open="open">
+          <summary id="amanda_title"><h3>12:00 - Create Rich Conversational apps using DialogFlow - Amanda Cavallaro</h3></summary>
+          <div id="amanda_bio">
+            <img src="https://avatars3.githubusercontent.com/u/9335603?s=460&v=4" class="speaker-image"/>
+            <p>
+              You can use Dialogflow and Google Cloud Platform for many reasons, we can create interactions to be used within your own communities, may it be a conversational app for families, companies, sports; to help workflows for both customers and businesses. Sometimes it can be a bad thing to talk to an automated conversation if it is not well-designed.
+            </p>
+            <p>
+              These pieces of technology can also help you escalate the conversation to a real human, as it can help you detect when human intervention is needed by using the ability of sentiment analysis, leveraging both sides of AI and Machine Learning in one computer-human interaction platform.
+            </p>
+            <p>
+              Everyone at all levels is welcome to attend this talk!
+            </p>
+            <p>
+              <strong>Amanda Cavallaro</strong> is a software developer, passionate about Cloud technologies, Human Computer Interactions and conversational apps. She works at <a href="http://resolver.co.uk">http://resolver.co.uk</a> and is a Women Techmakers Lead and Community Organiser at <a href="http://gdgcloud.com/">GDG Cloud London</a>. You can speak to her in Portuguese, English, Italian and a little of Japanese. More info on her personal website: <a href="http://amanda.ml">http://amanda.ml</a>
+            </p>
+            <small><a href="#amanda"># Direct link</a></small>
+          </div>
+        </details>
+        <h3>13:20 Not announced - <a href="#callforspeakers">Submit your proposal!</a></h3>
         <h3>13:20 ☕️ Coffee and 🍩 cake break</h3>
         <h3>14:00 Not announced</h3>
         <h3>15:00 Round up & thanks for today!</h3>
@@ -343,6 +399,7 @@
         We expect participants to follow these rules at all conference venues and conference-related social events.
       </div>
     </div>
+    <script src="lib/details.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"></script>
     <script>
     var instance = new TypeIt('#first h1', {
